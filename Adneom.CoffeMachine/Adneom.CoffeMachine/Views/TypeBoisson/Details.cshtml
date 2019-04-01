@@ -1,0 +1,24 @@
+﻿@model Adneom.CoffeMachine.Domain.Entities.TypeBoisson
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TypeBoisson</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeBoisson1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TypeBoisson1)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,42 @@
+﻿@model Adneom.CoffeMachine.Domain.Entities.ServiceMachine
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ServiceMachine</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AvecMug)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AvecMug)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Machine)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Machine.Nom)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Operateur)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Operateur.Operateur)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TypeBoisson)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TypeBoisson.TypeBoisson1)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

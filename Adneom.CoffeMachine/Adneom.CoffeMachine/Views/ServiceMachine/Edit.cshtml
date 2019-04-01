@@ -1,0 +1,49 @@
+﻿@model Adneom.CoffeMachine.Domain.Entities.ServiceMachine
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>ServiceMachine</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="MachineId" class="control-label"></label>
+                <select asp-for="MachineId" class="form-control" asp-items="ViewBag.MachineId"></select>
+                <span asp-validation-for="MachineId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TypeBoissonId" class="control-label"></label>
+                <select asp-for="TypeBoissonId" class="form-control" asp-items="ViewBag.TypeBoissonId"></select>
+                <span asp-validation-for="TypeBoissonId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OperateurId" class="control-label"></label>
+                <select asp-for="OperateurId" class="form-control" asp-items="ViewBag.OperateurId"></select>
+                <span asp-validation-for="OperateurId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AvecMug" class="control-label"></label>
+                <input asp-for="AvecMug" class="form-control" />
+                <span asp-validation-for="AvecMug" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
